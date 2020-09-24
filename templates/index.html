@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vim Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='weather-icons/css/weather-icons.css') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Search -->
+        <div class="search">
+            <form action="/" method="POST">
+                <input class="search-text" type="text" name="city" id="city" placeholder="Enter your City...">
+                <button class="button" type="submit">Check</button>
+            </form>
+        </div>
+        <!-- Heading Info -->
+        <div class="heading">
+            <h1 class="top city-country">{{ city }}, {{ country }}</h1>
+            <h2 class="top time">{{ current_time }}</h2>
+            <h2 class="top date">{{ today_date }}</h2>
+            <h2 class="top day">{{ day }}</h2>
+            <h1 class="top degree">{{ temp }}°c</h1>
+            <h4 class="top weather-desc">{{ weatherdesc }}</h4>
+        </div>
+        <!-- Icon -->
+        <div class="icon">
+            <i class="wi "></i>
+        </div>
+        <!-- Cards Info -->
+        <div class="cards-info">
+            <div class="card one">
+                <h4>{{ temp }}°c</h4>
+                <p>Temperature</p>
+            </div>
+            <div class="card two">
+                <h4>{{ weather }}</h4>
+                <p>Weather</p>
+            </div>
+            <div class="card three">
+                <h4>{{ feels}}°c</h4>
+                <p>Feels like </p>
+            </div>
+            <div class="card four">
+                <h4>{{ windspeed }}m/s</h4>
+                <p>Wind Speed</p>
+            </div>
+            <div class="card five">
+                <h4>{{ humidity }}%</h4>
+                <p>Humidity</p>
+            </div>
+            <div class="card six">
+                <h4>{{ pressure }}pa</h4>
+                <p>Pressure</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Developed by Pukka Web Services</p>
+        </div>
+    </div>
+</body>
+</html>
