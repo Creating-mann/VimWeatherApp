@@ -16,7 +16,7 @@ def index():
     """ For date and time """
     now = datetime.now()
 
-    current_time = now.strftime("%H:%M:%S")
+    current_time = now.strftime("%H:%M")
 
     today = date.today()
     today_date = today.strftime("%B %d, %Y")
