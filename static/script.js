@@ -70,8 +70,8 @@ window.onload = function(){
         function fog(){
             document.querySelector('.wi').classList.toggle('wi-day-fog');
         }
-        function clear(){
-            document.querySelector('.wi').classList.toggle('wi-day-clear');
+        function sunny(){
+            document.querySelector('.wi').classList.toggle('wi-day-sunny');
         }
         function hail(){
             document.querySelector('.wi').classList.toggle('wi-day-hail');
@@ -95,8 +95,8 @@ window.onload = function(){
         if (weather.includes("fog")){
             fog();
         }
-        if (weather.includes("clear")){
-            clear();
+        if (weather.includes("sun")){
+            sunny();
         }
         if (weather.includes("hail")){
             hail();

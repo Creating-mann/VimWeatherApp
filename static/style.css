@@ -99,3 +99,18 @@ i{
     width: 100%;
     color: #fff;
 }
+.footer img{
+	margin: 0 5px;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+} 
+.fa:hover{
+	border: #fff 2px solid;
+	border-radius: 50%;
+	padding: 3px;
+} 
