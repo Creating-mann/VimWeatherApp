@@ -40,9 +40,12 @@ def index():
             wind_speed = float(data['wind']['speed'])
             humidity = data['main']['humidity']
             pressure = data['main']['pressure']
+
+            return render_template("index.html", current_time=current_time, today_date=today_date, day=day, city=city, country=country, temp=temperature, feels=feels, weather=weather, weatherdesc=weather_desc, windspeed=wind_speed, humidity=humidity, pressure=pressure)
         else:
             error = "City not found"
-            print(error)
-        return render_template("index.html", current_time=current_time, today_date=today_date, day=day, city=city, country=country, temp=temperature, feels=feels, weather=weather, weatherdesc=weather_desc, windspeed=wind_speed, humidity=humidity, pressure=pressure)
+            return render_template("error.html", message=error)
+        
     else:
         return render_template("index.html", current_time=current_time, today_date=today_date, day=day, city="None", country="None", temp=0, feels=0, weather="None", weatherdesc="None", windspeed=0, humidity=0, pressure=0)
+

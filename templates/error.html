@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error:404</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <!--<link rel="stylesheet" href="../static/style.css">-->
+</head>
+<body>
+    <nav class="error-nav">
+        <p>Error: 404</p>
+    </nav>
+    <h1 class="error-message">{{ message }}</h1>
+</body>
+</html>
