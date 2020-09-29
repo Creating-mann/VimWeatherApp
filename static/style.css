@@ -6,11 +6,6 @@ body{
     overflow: hidden;
 }
 
-i{
-	padding-bottom: 0.2em;
-	font-size: 3em;
-}
-
 ::placeholder{
     color: #fff;
 }
@@ -94,23 +89,46 @@ i{
 
 /* Footer */
 .footer{
-    position: absolute;
-    bottom: 10px;
     width: 100%;
     color: #fff;
 }
 .footer img{
 	margin: 0 5px;
 }
+
+i{
+	padding-bottom: 0.2em;
+	font-size: 3em;
+}
+
 a{
 	color: #fff;
 	text-decoration: none;
 }
-ul{
-	list-style: none;
+
+.fa{
+	color: #fff;
+	padding: 5px;
 } 
+
 .fa:hover{
 	border: #fff 2px solid;
 	border-radius: 50%;
 	padding: 3px;
 } 
+
+/* for error.html */
+
+.error-nav{
+    background: red;
+    padding: 0.1em;
+    color: #fff;
+    text-align: center;
+}
+.error-nav p{
+    font-size: larger;
+    font-weight: bolder;
+}
+.error-message{
+    text-align: center;
+}
